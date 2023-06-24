@@ -31,3 +31,4 @@ build/
 
 ### VS Code ###
 .vscode/
+/src/main/resources/Firebase/arboles-f9053-firebase-adminsdk-a57so-7ce95b61a6.json
