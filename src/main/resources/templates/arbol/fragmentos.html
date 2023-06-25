@@ -134,9 +134,21 @@
                                             </div>
                                             <div class="card-body">
                                                 <div class="mb-3">
-                                                    <label for="descripcion">[[#{arbol.descripcion}]]</label>
+                                                    <label for="nombre">[[#{arbol.nombre}]]</label>
                                                     <input type="text" class="form-control" 
-                                                           name="descripcion" th:field="*{descripcion}"
+                                                           name="nombre" th:field="*{nombre}"
+                                                           required="true">
+                                                </div>
+                                                <div class="mb-3">
+                                                    <label for="tipoFlor">[[#{arbol.tipoFlor}]]</label>
+                                                    <input type="text" class="form-control" 
+                                                           name="tipoFlor" th:field="*{tipoFlor}"
+                                                           required="true">
+                                                </div>
+                                                <div class="mb-3">
+                                                    <label for="altura">[[#{arbol.altura}]]</label>
+                                                    <input type="text" class="form-control" 
+                                                           name="altura" th:field="*{altura}"
                                                            required="true">
                                                 </div>
                                                 <div class="mb-3">

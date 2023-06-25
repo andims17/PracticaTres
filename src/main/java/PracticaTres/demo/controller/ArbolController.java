@@ -63,7 +63,7 @@ public class ArbolController {
     @GetMapping("/modificar/{idArbol}")
     public String ArbolModificar(Arbol arbol, Model model) {
         arbol = arbolService.getArbol(arbol);
-        model.addAttribute("categoria", arbol);
+        model.addAttribute("arbol", arbol);
         return "/arbol/modifica";
     }
     
