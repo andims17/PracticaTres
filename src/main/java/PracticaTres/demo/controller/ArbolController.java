@@ -24,6 +24,8 @@ import org.springframework.web.multipart.MultipartFile;
 public class ArbolController {
     @Autowired
     ArbolService arbolService;
+    @Autowired
+    private FirebaseStorageServiceImpl firebaseStorageService;
     
     @GetMapping("/listado")
     public String inicio(Model model) {
@@ -36,8 +38,6 @@ public class ArbolController {
         return "/arbol/modifica";
     }
 
-    @Autowired
-    private FirebaseStorageServiceImpl firebaseStorageService;
    
     @PostMapping("/guardar")
     public String arbolGuardar(Arbol arbol,
