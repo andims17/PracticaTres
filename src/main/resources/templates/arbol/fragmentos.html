@@ -41,16 +41,16 @@
                               method="POST" class="was-validated" enctype="multipart/form-data">
                             <div class="modal-body">
                                 <div class="mb-3">
-                                    <label for="descripcion">Nombre</label>
-                                    <input type="text" class="form-control" name="descripcion" required="true"/>
+                                    <label for="nombre">Nombre</label>
+                                    <input type="text" class="form-control" name="nombre" required="true"/>
                                 </div>
                                 <div class="mb-3">
-                                    <label for="descripcion">Tipo flor</label>
-                                    <input type="text" class="form-control" name="descripcion" required="true"/>
+                                    <label for="tipoFlor">Tipo Flor</label>
+                                    <input type="text" class="form-control" name="tipoFlor" required="true"/>
                                 </div>
                                 <div class="mb-3">
-                                    <label for="descripcion">Altura</label>
-                                    <input type="text" class="form-control" name="descripcion" required="true"/>
+                                    <label for="altura">Altura</label>
+                                    <input type="text" class="form-control" name="altura" required="true"/>
                                 </div>
                                 <div class="mb-3">
                                     <label for="imagen">Imagen</label>
@@ -130,29 +130,29 @@
                                     <div class="col">
                                         <div class="card">
                                             <div class="card-header">
-                                                <h4>[[#{accion.actualizar}]]</h4>
+                                                <h4>Actualizar</h4>
                                             </div>
                                             <div class="card-body">
                                                 <div class="mb-3">
-                                                    <label for="nombre">[[#{arbol.nombre}]]</label>
+                                                    <label for="nombre">Nombre</label>
                                                     <input type="text" class="form-control" 
                                                            name="nombre" th:field="*{nombre}"
                                                            required="true">
                                                 </div>
                                                 <div class="mb-3">
-                                                    <label for="tipoFlor">[[#{arbol.tipoFlor}]]</label>
+                                                    <label for="tipoFlor">Tipo Flor</label>
                                                     <input type="text" class="form-control" 
                                                            name="tipoFlor" th:field="*{tipoFlor}"
                                                            required="true">
                                                 </div>
                                                 <div class="mb-3">
-                                                    <label for="altura">[[#{arbol.altura}]]</label>
+                                                    <label for="altura">Altura</label>
                                                     <input type="text" class="form-control" 
                                                            name="altura" th:field="*{altura}"
                                                            required="true">
                                                 </div>
                                                 <div class="mb-3">
-                                                    <label for="imagen">[[#{arbol.rutaImagen}]]</label>
+                                                    <label for="imagen">Ruta de la Imagen</label>
                                                     <input class="form-control" type="file" name="imagenFile"
                                                            onchange="readURL(this);" />
                                                     <img id="blah" th:src="@{${arbol.rutaImagen}}" alt="your image" height="200"/>
