@@ -9,7 +9,7 @@ public interface FirebaseStorageService {
     public String cargaImagen(MultipartFile archivoLocalCliente, String carpeta, Long id);
 
   
-    final String BucketName = "techshop-a7a02.appspot.com";
+    final String BucketName = "practicaarbol.appspot.com";
 
     
     final String rutaSuperiorStorage = "arboles";
@@ -18,6 +18,6 @@ public interface FirebaseStorageService {
     final String rutaJsonFile = "firebase";
     
     
-    final String archivoJsonFile = "arboles-f9053-firebase-adminsdk-a57so-7ce95b61a6.js";
+    final String archivoJsonFile = "practicaarbol-firebase-adminsdk-09gn7-e64664c023.json";
 
 }
