@@ -111,5 +111,72 @@
                 </div>
             </div>
         </section>
+        <!-- 4 Fragmento que se utiliza en la página modifca.html -->
+        <section th:fragment="editarArbol">
+            <div class="row">
+                <div class="col-md-2"></div>
+                <div class="col-md-8">
+                    <form method="POST"
+                          th:action="@{/arbol/guardar}" 
+                          th:object="${arbol}"
+                          class="was-validated"                          
+                          enctype="multipart/form-data">
+                        <input type="hidden" name="idArbol" th:field="*{idArbol}"/>
+                        <input type="hidden" name="rutaImagen" th:field="*{rutaImagen}"/>
+                        <section th:replace="~{arbol/fragmentos :: botonesEditar}"/>
+                        <div id=details>
+                            <div class="container">
+                                <div class="row">
+                                    <div class="col">
+                                        <div class="card">
+                                            <div class="card-header">
+                                                <h4>[[#{accion.actualizar}]]</h4>
+                                            </div>
+                                            <div class="card-body">
+                                                <div class="mb-3">
+                                                    <label for="descripcion">[[#{arbol.descripcion}]]</label>
+                                                    <input type="text" class="form-control" 
+                                                           name="descripcion" th:field="*{descripcion}"
+                                                           required="true">
+                                                </div>
+                                                <div class="mb-3">
+                                                    <label for="imagen">[[#{arbol.rutaImagen}]]</label>
+                                                    <input class="form-control" type="file" name="imagenFile"
+                                                           onchange="readURL(this);" />
+                                                    <img id="blah" th:src="@{${arbol.rutaImagen}}" alt="your image" height="200"/>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                    </form>
+                </div>
+            </div>
+        </section>
+
+        <!-- 5 Fragmento que se utiliza en el fragmento anterior -->
+        <section th:fragment="botonesEditar">
+            <div class="container py-4 mb-4 bg-light">
+                <div class="row">
+                    <div class="col-md-4 d-grid">
+                        <a th:href="@{/arbol/listado}" class="btn btn-primary">
+                            <i class="fas fa-arrow-left"></i> [[#{accion.regresar}]]
+                        </a>
+                    </div>
+                    <div class="col-md-4 d-grid">                                
+                        <a th:href="@{/arbol/eliminar/}+${arbol.idArbol}"
+                           class="btn btn-danger">
+                            <i class="fas fa-trash"></i> [[#{accion.eliminar}]]
+                        </a>
+                    </div>
+                    <div class="col-md-4 d-grid">
+                        <button type="submit" class="btn btn-success">
+                            <i class="fas fa-check"></i> [[#{accion.guardar}]]
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </section>
 
 </html>
